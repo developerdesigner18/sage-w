@@ -12,7 +12,7 @@ app.get('/',(req,res)=>{
 mongoose
   .connect('mongodb+srv://test123:test123@formbuilder.90zy3kj.mongodb.net/?retryWrites=true&w=majority')
   .then((result) =>
-    app.listen(5000, () => {
+    app.listen(process.env.PORT || 5000,  () => {
       console.log("Connected DB 5000");
     })
   )
